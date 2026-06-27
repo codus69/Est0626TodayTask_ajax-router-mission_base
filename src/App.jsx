@@ -29,9 +29,9 @@ function App() {
       <Route path="/" element={<Layout loaded={loaded} />}>
         <Route index element={<Home posts={posts} />} />
         <Route path="posts" element={<Posts posts={posts} />} />
-        <Route path="posts/new" element={<PostNew />} />
-        <Route path="posts/:id" element={<PostDetail />} />
-        <Route path="posts/:id/edit" element={<PostEdit />} />
+        <Route path="posts/new" element={<PostNew posts={posts} setPosts={setPosts} />} />
+        <Route path="posts/:id" element={<PostDetail posts={posts} setPosts={setPosts} />} />
+        <Route path="posts/:id/edit" element={<PostEdit posts={posts} setPosts={setPosts} />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

@@ -6,7 +6,7 @@ export default function Posts({ posts }) {
       <h2>전체 글 목록</h2>
 
       {posts.length === 0 ? (
-        <p>등록된 글이 없습니다.</p>
+        <div>등록된 글이 없습니다.</div>
       ) : (
         <ul>
           {posts.map((post) => (
